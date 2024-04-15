@@ -97,7 +97,7 @@ import { useEffect } from "react";
                 <input type="number" min="00" placeholder="Hours" id="hours"/>
                 <input type="number" max="60" min="00" placeholder="Minutes" id="minutes"/>
                 <input type="number" max="60" min="00" placeholder="Seconds" id="seconds"/>
-                <Button variant="contained" style={{backgroundColor:"#fe339c"}} onClick={set}>Set</Button>
+                <Button variant="contained" style={{backgroundColor:"#fe339c"}} id ="set" onClick={set}>Set</Button>
             </div>
 
 

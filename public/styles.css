@@ -1,11 +1,14 @@
 *{
     font-family: Poppins, sans-serif;
-
-    
-
+    box-sizing: border-box;
+ 
 }
-html{
 
+html {
+
+    align-content: center;
+    vertical-align: center;
+    height: 100vh;
     background-image:url("bg4.jpeg");
     background-attachment: fixed;
     background-size: cover;
@@ -16,9 +19,9 @@ html{
     text-align: center;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 10px #fc72b9, 0 0 20px #fc72b9, 0 0 30px #fc72b9; 
-    font-size: 50px;
+    font-size: 4rem;
     margin-bottom: 50px;
-    margin-top: 70px;
+
 }
 .App h1{
     color:#fe339c;
@@ -36,16 +39,20 @@ html{
 .App{
 
     background-color: white;
+    
     box-shadow: #fc72b9 0 0 10px, #fc72b9 0 0 20px, #fc72b9 0 0 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     margin:auto auto;
     border-radius: 15px;
     padding:40px;
-    width: fit-content;
-   
+    width: 50%;
+    min-width: 300px;
+    height:50%;
+
 }
 .inputs, .controls{
     display: flex;
@@ -64,4 +71,24 @@ html{
     border-radius: 5px;
     border-color: #fe339c;
     border-width: 1px;
+}
+@media screen and (max-width: 768px) {
+    .App {
+        width: 90% /* Adjust width with a percentage */
+    }
+    .App h1{
+        margin-bottom: 10px;
+    }
+    .inputs{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    #hours, #minutes, #seconds {
+        grid-column: span 1; /* Each input occupies one column */
+    }
+    
+    #set{
+        grid-column: 2 / span 1; /* The seconds input spans from the second column */
+    }
 }
